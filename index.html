@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sally Student React</title>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> <!--babel library-->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script> <!--react library-->
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> <!--react-DOM library-->
+    <div id="root-application"></div>
+
+    <script type="text/babel">
+
+        const appRoot = document.querySelector('#root-application');
+        let name = "Sally Student";
+
+        function App(props){
+            return (
+                <main>
+                    <header className = {props.className}>
+                        {props.children[0]}
+                        <img src = {props.url}></img>
+                    </header>
+                    
+                        {props.children[1]}
+                    
+                </main>
+            );
+             
+              
+            
+                         
+        };
+
+        ReactDOM.render(
+
+            <App className = 'bio' url='https://www.responsibletravel.com/imagesclient/L_162789.jpg'> 
+        <h1>Sally Student</h1>
+        
+
+        <div>
+            <h2>About Me</h2>
+            <p>I am a very good engineer that loves to Learn React!</p>
+            <h3>"Skills"</h3>
+            <ul>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </div>
+    </App>, appRoot);
+
+    </script>
+    
+</body>
+</html>
